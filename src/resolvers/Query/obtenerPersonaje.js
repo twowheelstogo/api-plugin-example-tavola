@@ -113,11 +113,7 @@ const RepartoStarWars = [
 ];
 
 //resolver
-const resolvers = {
-    Query:{
-        obtenerPersonaje: (_, {input}, ctx, info) => {
-            const resultado = RepartoStarWars.filter( personaje => personaje.name === input.name);
-            return resultado;
-        }
-    }
+export default async function obtenerPersonaje(_, {input}, ctx, info){
+    const resultado = RepartoStarWars.filter( personaje => personaje.name === input.name);
+    return resultado;
 }

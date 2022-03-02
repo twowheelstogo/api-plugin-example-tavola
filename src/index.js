@@ -8,7 +8,7 @@ import schemas from "./schemas/index.js";
  * @param {ReactionAPI} app The ReactionAPI instance
  * @returns {undefined}
  */
-export default async function register(app) {
+ export default async function register(app) {
   await app.registerPlugin({
     label: "Pruebita",
     name: "plugin-pruebita",
@@ -17,5 +17,6 @@ export default async function register(app) {
       resolvers,
       schemas
     }
+    ,queries
   });
 }
