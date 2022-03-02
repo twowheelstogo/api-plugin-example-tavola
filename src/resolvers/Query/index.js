@@ -1,7 +1,10 @@
-import product from "./product.js";
-import products from "./products.js";
+import obtenerPersonaje from "./obtenerPersonaje.js";
 
 export default {
-  product,
-  products
+    obtenerPersonaje
 };
+
+
+
+
+
