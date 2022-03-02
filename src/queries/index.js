@@ -1,5 +1,7 @@
-import emailTemplates from "./emailTemplates.js";
+import product from "./product.js";
+import products from "./products.js";
 
 export default {
-  emailTemplates
+  product,
+  products
 };

@@ -1,9 +1,21 @@
 [
   {
-    "description": "Shop managers acting on email settings.",
-    "subjects": [ "reaction:groups:shop-managers" ],
-    "resources": [ "reaction:legacy:email-templates" ],
+    "description": "Product managers acting on specific entities.",
+    "subjects": [ "reaction:groups:product-managers" ],
+    "resources": [ "reaction:legacy:products" ],
     "actions": [
+      "read"
+    ],
+    "effect": "allow"
+  },
+  {
+    "description": "Product managers acting on specific entities.",
+    "subjects": [ "reaction:groups:product-managers" ],
+    "resources": [ "reaction:legacy:products:*" ],
+    "actions": [
+      "archive",
+      "clone",
+      "create",
       "read",
       "update"
     ],

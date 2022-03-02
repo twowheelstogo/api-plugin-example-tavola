@@ -1,5 +1,7 @@
-import getFulfillmentMethodsWithQuotes from "./obtenerPersonaje.js";
+import product from "./product.js";
+import products from "./products.js";
 
 export default {
-    getFulfillmentMethodsWithQuotes
+  product,
+  products
 };

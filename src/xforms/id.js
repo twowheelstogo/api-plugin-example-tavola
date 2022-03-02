@@ -2,12 +2,15 @@ import decodeOpaqueIdForNamespace from "@reactioncommerce/api-utils/decodeOpaque
 import encodeOpaqueId from "@reactioncommerce/api-utils/encodeOpaqueId.js";
 
 const namespaces = {
+  Product: "reaction/product",
   Shop: "reaction/shop",
-  Template: "reaction/template"
+  Tag: "reaction/tag"
 };
 
+export const encodeProductOpaqueId = encodeOpaqueId(namespaces.Product);
 export const encodeShopOpaqueId = encodeOpaqueId(namespaces.Shop);
-export const encodeTemplateOpaqueId = encodeOpaqueId(namespaces.Template);
+export const encodeTagOpaqueId = encodeOpaqueId(namespaces.Tag);
 
+export const decodeProductOpaqueId = decodeOpaqueIdForNamespace(namespaces.Product);
 export const decodeShopOpaqueId = decodeOpaqueIdForNamespace(namespaces.Shop);
-export const decodeTemplateOpaqueId = decodeOpaqueIdForNamespace(namespaces.Template);
+export const decodeTagOpaqueId = decodeOpaqueIdForNamespace(namespaces.Tag);
