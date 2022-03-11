@@ -1,5 +1,6 @@
 import pkg from "../package.json";
-import queries from "./resolvers/Query/index.js";
+// import queries from "./queries/index.js";
+import mutations from "./mutations/index.js"
 import resolvers from "./resolvers/index.js";
 import schemas from "./schemas/index.js";
 
@@ -13,10 +14,16 @@ export default async function register(app) {
     label: "Pruebita",
     name: "pruebita",
     version: pkg.version,
+    collections:{
+      Ejemplo:{
+        name: "EJEMPLO"
+      }
+    },
     graphQL: {
       resolvers,
       schemas
-    }
-    ,queries
+    },
+    // queries,
+    mutations
   });
 }

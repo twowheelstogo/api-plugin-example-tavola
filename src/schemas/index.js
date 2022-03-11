@@ -1,8 +1,5 @@
 import importAsString from "@reactioncommerce/api-utils/importAsString.js";
 
-const schema = importAsString("./schema.graphql");
+const mySchemas = importAsString("./schema.graphql");
 
-export default [schema];
-
-
-
+export default [mySchemas]

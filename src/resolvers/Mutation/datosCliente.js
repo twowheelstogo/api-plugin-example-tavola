@@ -114,19 +114,19 @@ const RepartoStarWars = [
 
 
 
-export default async function Personajes(_, {input}, ctx, info){
-    const resultado = RepartoStarWars.filter( 
-        personaje => personaje.name === input.name);
-
-    return resultado;
-}
-
-
-//resolver
-//const resolvers = {
-//   Query:{
-//     obtenerPersonaje: (_, {input}, ctx, info) => {
-//          const resultado = RepartoStarWars.filter( personaje => personaje.name === input.name);
-//          return resultado;
-//     }
+// export default async function datosCliente(_, {input}, context, info){
+//     context.query.productById
+//     return RepartoStarWars;
 // }
+
+export default async function datosCliente(_,{input}, context) {
+    console.log(input)
+    // const {nombre} = input;
+    const detail = await context.mutations.datosCliente(context,{
+        input
+    })
+    return {
+        detail
+    };
+}
+  

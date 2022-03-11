@@ -1,7 +1,5 @@
-import product from "./product.js";
-import products from "./products.js";
+import datosCliente from "./datosCliente.js";
 
 export default {
-  product,
-  products
-};
+    datosCliente
+}

@@ -1,28 +1,12 @@
-"A shipping parcel"
-type Query{
-  obtenerPersonaje(input:PersonajeInput!): [Personaje] 
-  obtenerInfo: [Info]
+
+
+type infoCliente{
+  nombre: String
 }
 
-type Info{
-  gender: String
-  homeworld: String
-  films: [String]
-  vehicles: [String]
-  created: String
-  edited: String
+extend type Mutation {
+  datosCliente(input: Cliente): infoCliente
 }
-
-input PersonajeInput{
-  name: String
-}
-
-type Personaje {
-  name: String
-  height: Int
-  mass: Int
-  hair_color: String
-  skin_color: String
-  eye_color: String
-  birth_year: String
+input Cliente {
+  nombre: String
 }

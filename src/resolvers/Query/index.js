@@ -1,10 +1,5 @@
-import obtenerPersonaje from "./obtenerPersonaje.js";
+import datosCliente from "./datosCliente.js";
 
 export default {
-    obtenerPersonaje
-};
-
-
-
-
-
+    datosCliente
+}
